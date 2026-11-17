@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Duitku",
+    "slug": "duitku",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#FFF7F1",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "Duitku memakai pengenal suara sistem untuk mengubah ucapanmu menjadi teks transaksi.",
+        "NSMicrophoneUsageDescription": "Duitku memakai mikrofon untuk mendikte transaksi, misalnya \"beli kopi 25 ribu pakai gopay\"."
+      }
+    },
+    "android": {
+      "package": "com.kakko.duitku",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#FFF7F1",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFF7F1",
+          "dark": {
+            "image": "./assets/brand/logo-putih.png",
+            "backgroundColor": "#141020"
+          }
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Duitku memakai mikrofon untuk mendikte transaksi, misalnya \"beli kopi 25 ribu pakai gopay\".",
+          "speechRecognitionPermission": "Duitku memakai pengenal suara sistem untuk mengubah ucapanmu menjadi teks transaksi.",
+          "androidSpeechServicePackages": [
+            "com.google.android.googlequicksearchbox",
+            "com.google.android.as"
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c7b20c13-6d4a-4143-9366-957b2711fa1c"
+      }
+    }
+  }
+}
